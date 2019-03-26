@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="cc.lecent.ywgk.remittance.viewmode.PayNextViewModel"/>
+        <import type="android.view.View"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="20dp">
+
+       <ScrollView
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_marginBottom="100dp"
+           android:scrollbarSize="0dp">
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:orientation="vertical">
+               <LinearLayout
+                   android:id="@+id/line1"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:paddingRight="20dp"
+                   android:paddingLeft="20dp">
+
+
+                   <LinearLayout
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:orientation="horizontal">
+
+                       <TextView
+                           style="@style/normal_18dp"
+                           android:text="家属姓名" />
+
+                       <TextView
+                           android:layout_marginLeft="50dp"
+                           style="@style/normal_18dp"
+                           android:text="xxx" />
+
+                   </LinearLayout>
+                    <View
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.7dp"
+                        android:background="#eaeaea"/>
+                   <LinearLayout
+                       android:layout_marginTop="5dp"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:orientation="horizontal">
+
+                       <TextView
+                           style="@style/normal_18dp"
+                           android:text="所属监狱" />
+
+                       <TextView
+                           style="@style/normal_18dp"
+                           android:layout_marginLeft="50dp"
+                           android:text="贵州省安顺监狱" />
+
+                   </LinearLayout>
+               </LinearLayout>
+               <View
+                   android:layout_marginTop="15dp"
+                   android:layout_width="match_parent"
+                   android:layout_height="0.8dp"
+                   android:background="#e6e6e6"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{viewmodel.payMoney}"
+                        android:textColor="#ff0077ea"
+                        android:textSize="30dp"
+                        />
+                    <LinearLayout
+                        android:layout_marginTop="15dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="支付剩余时间："
+                            android:textColor="#ff333333"
+                            android:textSize="16dp"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{viewmodel.showTime}"
+                            android:textColor="#FF0000"
+                            android:textSize="16dp"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginTop="15dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="@{(viewmodel.payWay==3)?View.VISIBLE:View.INVISIBLE}">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="实际到账"
+                            android:textColor="#ff666666"
+                            android:textSize="12dp"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{viewmodel.trueMoney}"
+                            android:textColor="#ff666666"
+                            android:textSize="12dp"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="，中国银联收取手续费"
+                            android:textColor="#ff666666"
+                            android:textSize="12dp"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{viewmodel.procedureMoney}"
+                            android:textColor="#ff666666"
+                            android:textSize="12dp"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+               <View
+                   android:layout_marginTop="10dp"
+                   android:layout_width="match_parent"
+                   android:layout_height="0.8dp"
+                   android:background="#e6e6e6"/>
+               <TextView
+                   android:id="@+id/payment_method"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@id/line4"
+                   android:layout_marginTop="9dp"
+                   android:text="选择支付方式"
+                   android:textColor="#ff333333"
+                   android:textSize="18dp"
+                   android:paddingRight="20dp"
+                   android:paddingLeft="20dp"/>
+
+               <RelativeLayout
+                   android:id="@+id/line5"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@id/payment_method"
+                   android:layout_marginLeft="15dp"
+                   android:layout_marginTop="18dp"
+                   android:layout_marginRight="15dp"
+                   android:orientation="horizontal"
+                   android:paddingRight="20dp"
+                   android:paddingLeft="20dp">
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="vertical"
+                       android:onClick="@{()->viewmodel.aliPay()}">
+
+                       <LinearLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content">
+                           <ImageView
+                               android:layout_width="30dp"
+                               android:layout_height="30dp"
+                               android:background="@mipmap/aliapy_icon" />
+
+                           <TextView
+                               style="@style/normal_16dp"
+                               android:layout_gravity="center"
+                               android:layout_marginLeft="20dp"
+                               android:text="支付宝"
+                               android:textColor="#ff2e2a27"/>
+                       </LinearLayout>
+
+                       <LinearLayout
+                           android:layout_marginTop="18dp"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:onClick="@{()->viewmodel.weixinPay()}">
+                           <ImageView
+                               android:layout_width="30dp"
+                               android:layout_height="30dp"
+                               android:background="@mipmap/weixin_icon" />
+
+                           <TextView
+                               style="@style/normal_16dp"
+                               android:layout_gravity="center"
+                               android:layout_marginLeft="20dp"
+                               android:text="微信支付"
+                               android:textColor="#ff2e2a27" />
+                       </LinearLayout>
+                       <LinearLayout
+                           android:layout_marginTop="18dp"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:onClick="@{()->viewmodel.ylianPay()}">
+                           <ImageView
+                               android:layout_width="30dp"
+                               android:layout_height="30dp"
+                               android:background="@mipmap/yinlian_icon" />
+
+                           <TextView
+                               style="@style/normal_16dp"
+                               android:layout_gravity="center"
+                               android:layout_marginLeft="20dp"
+                               android:text="银联支付"
+                               android:textColor="#ff2e2a27"/>
+                       </LinearLayout>
+
+                   </LinearLayout>
+                   <RadioGroup
+                       android:id="@+id/rg_three"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_alignParentRight="true"
+                       android:orientation="vertical">
+
+                       <RadioButton
+                           android:id="@+id/rb7"
+                           android:layout_width="30dp"
+                           android:layout_height="30dp"
+                           android:background="@drawable/chbox_selector"
+                           android:button="@null"
+                           android:checked="@{viewmodel.payWay==1}"
+                           android:onClick="@{()->viewmodel.aliPay()}"/>
+
+                       <RadioButton
+                           android:id="@+id/rb8"
+                           android:layout_width="30dp"
+                           android:layout_height="30dp"
+                           android:layout_marginTop="18dp"
+                           android:background="@drawable/chbox_selector"
+                           android:button="@null"
+                           android:checked="@{viewmodel.payWay==2}"
+                           android:onClick="@{()->viewmodel.weixinPay()}"/>
+
+                       <RadioButton
+                           android:id="@+id/rb9"
+                           android:layout_width="30dp"
+                           android:layout_height="30dp"
+                           android:layout_marginTop="18dp"
+                           android:background="@drawable/chbox_selector"
+                           android:button="@null"
+                           android:checked="@{viewmodel.payWay==3}"
+                           android:onClick="@{()->viewmodel.ylianPay()}"/>
+                   </RadioGroup>
+               </RelativeLayout>
+           </LinearLayout>
+       </ScrollView>
+
+        <Button
+            android:id="@+id/button_next"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/blue_btn_rectangle"
+            android:text="立即支付"
+            android:textColor="#fff"
+            android:textSize="16dp"
+            android:onClick="@{()->viewmodel.onNext()}"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="15dp"
+            android:text="中国银联提供资金汇款服务"
+            android:textColor="#ff666666"
+            android:textSize="12dp" />
+    </RelativeLayout>
+</layout>

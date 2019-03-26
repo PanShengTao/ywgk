@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.mindorks.framework.mvvm.ui.feed.FeedActivity">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="cc.lecent.ywgk.shop.model.ShopActivitViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <!--<cc.lecent.ywgk.data.CustomNavigatorBar-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="43dp"-->
+            <!--app:leftImage="@drawable/title_back"-->
+            <!--app:leftImageVisiable="true"-->
+            <!--app:midText="购物车"-->
+            <!--app:midTextFontColor="#fff"-->
+            <!--app:titleBarBackground="#ff2" />-->
+
+        <FrameLayout
+            android:id="@+id/fr_displaydata_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+</layout>

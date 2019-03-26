@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="cc.lecent.ywgk.greetings.model.FamilyGreetingsItemModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:onClick="@{()-> viewModel.itemGreetingsOnClick()}"
+        android:layout_marginTop="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginLeft="8dp"
+            android:layout_centerVertical="true"
+            android:text="@{viewModel.nameShort}"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:background="@{viewModel.viewBg}"
+            />
+
+        <RelativeLayout
+            android:id="@+id/rl"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:id="@+id/all_name"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{viewModel.nameStr}"
+                android:textSize="13sp"
+                android:textColor="@color/home_black"
+                />
+
+            <TextView
+                android:layout_toRightOf="@+id/all_name"
+                android:layout_marginLeft="5dp"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="@{viewModel.auditStatus}"
+                android:textSize="7sp"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:background="@{viewModel.auditStatusBg}"
+                />
+
+            <TextView
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{viewModel.auditTime}"
+                android:textSize="7sp"
+                android:textColor="@color/text_gray_color"
+                android:layout_marginRight="8dp"
+                />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl"
+            android:layout_toRightOf="@+id/name"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/text_gray_color"
+            android:text="@{viewModel.auditText}"
+            android:textSize="11sp"
+            android:layout_marginRight="13dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            />
+
+
+
+ </RelativeLayout>
+
+
+
+</layout>

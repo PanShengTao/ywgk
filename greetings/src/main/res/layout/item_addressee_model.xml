@@ -1,0 +1,59 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="cc.lecent.ywgk.greetings.model.AddresseeItemModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?selectableItemBackground"
+        android:padding="10dp"
+        android:onClick="@{()-> viewModel.itemClick()}"
+
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerVertical="true"
+            android:id="@+id/ll_gxxm"
+            android:gravity="center">
+            <!--<com.thinkcool.circletextimageview.CircleTextImageView-->
+                <!--android:id="@+id/ct_name"-->
+                <!--android:layout_width="40dp"-->
+                <!--android:layout_height="40dp"-->
+                <!--app:citv_border_color="@color/red"-->
+                <!--app:citv_border_width="2dp"-->
+                <!--android:layout_gravity="center"-->
+                <!--app:citv_text_text="@{viewModel.name}"-->
+                <!--app:citv_text_size="16sp"-->
+                <!--app:citv_text_color="@color/red"-->
+                <!--/>-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/name_bg_kuang"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:paddingLeft="7dp"
+                android:paddingRight="7dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:text="@={viewModel.name}"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@={viewModel.relation}"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</layout>

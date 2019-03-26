@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.mindorks.framework.mvvm.ui.feed.FeedActivity">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="cc.lecent.ywgk.me.model.MeBindingViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFF8F8F8"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/name_Location_id"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="#FF0077EA"
+            android:gravity="center|left"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:onClick="@{viewModel::ReturnOClick}"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@mipmap/ic_fanhui" />
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="家属绑定"
+                android:textColor="#ffffff"
+                android:textSize="16dp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="12dp"
+            android:background="#ffffff"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingLeft="12dp"
+                android:text="家属姓名"
+                android:textColor="#424652" />
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|left"
+                android:paddingLeft="15dp"
+                android:text="请输入家属姓名" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#FFF8F8F8" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="#ffffff"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingLeft="12dp"
+                android:text="证件号码"
+                android:textColor="#424652" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|left"
+                android:paddingLeft="15dp"
+                android:text="请输入身份证号码" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/xiaoyb"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginRight="20dp"
+            android:background="#FF0077EA"
+            android:onClick="@{viewModel::NextStepOnClick}"
+            android:text="下一步"
+            android:textColor="#ffffff" />
+
+
+    </LinearLayout>
+
+
+</layout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingDefaultResource">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="cc.lecent.ywgk.meet.model.ItemRemoteMeetModel" />
+
+        <import type="me.tatarka.bindingcollectionadapter2.LayoutManagers" />
+        <import type="android.view.View" />
+    </data>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="50dp"
+        >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="提示："
+            android:textSize="13dp"
+            android:textColor="@color/text_hint_color"
+            />
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1.会见开始时，请勿退出，退出后无法再次进入"
+            android:textSize="13dp"
+            android:textColor="@color/text_hint_color"
+            />
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2.会见开始时，请勿退出，退出后无法再次进入，请注意"
+            android:textSize="13dp"
+            android:textColor="@color/text_hint_color"
+            />
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3.会见开始时，请勿退出，退出后无法再次进入"
+            android:textSize="13dp"
+            android:textColor="@color/text_hint_color"
+            />
+
+
+    </LinearLayout>
+
+</layout>

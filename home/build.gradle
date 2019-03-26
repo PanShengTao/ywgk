@@ -1,0 +1,21 @@
+apply plugin: 'cc.lecent.android.app'
+android {
+    defaultConfig {
+        multiDexEnabled true
+    }
+}
+dependencies {
+    api project(':data')
+
+    api 'me.tatarka.bindingcollectionadapter2:bindingcollectionadapter:2.2.0'
+    api 'me.tatarka.bindingcollectionadapter2:bindingcollectionadapter-recyclerview:2.2.0'
+    //上拉刷新 下拉加载
+    api 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-20'
+    //轮播
+    api 'com.youth.banner:banner:1.4.8'
+
+    api 'com.daimajia.easing:library:2.0@aar'
+    api 'com.daimajia.androidanimations:library:2.2@aar'
+    api 'com.android.support.constraint:constraint-layout:1.1.0'
+
+}

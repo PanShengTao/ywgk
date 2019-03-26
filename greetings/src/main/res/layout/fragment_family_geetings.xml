@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="cc.lecent.ywgk.greetings.model.FamilyGreetingsModel" />
+
+        <import type="me.tatarka.bindingcollectionadapter2.LayoutManagers" />
+        <import type="android.view.View" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/home_bg_color"
+        >
+        <cc.lecent.ywgk.data.CustomNavigatorBar
+            android:id="@+id/customNavigatorBar"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:background="#0077EA"
+            app:leftImageVisiable="true"
+            app:leftTextVisibale="false"
+            app:midText="亲情问候"
+            app:midTextFontColor="@color/white"
+            app:leftImage="@drawable/title_back"
+            app:rightImageVisible="false"
+            app:rightTextVisible="true"
+            app:rightText="新增"
+            app:rightTextColor="@color/white"
+            >
+        </cc.lecent.ywgk.data.CustomNavigatorBar>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:layout_below="@+id/customNavigatorBar"
+        android:id="@+id/smartRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:onLoadMoreCommand="@{viewModel.loadMoreCommand}"
+        android:onRefreshCommand="@{viewModel.refreshCommand}">
+
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal|center_vertical"
+            app:itemBinding="@{viewModel.itemViewSelector}"
+            app:items="@{viewModel.itemModels}"
+            app:layoutManager="@{LayoutManagers.linear()}" />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+        
+        
+        
+        
+        <ImageView
+            android:onClick="@{()-> viewModel.EditorGreetingsOnClick()}"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:src="@drawable/write_pic"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="14dp"
+            android:layout_marginBottom="69dp"
+
+            />
+
+ </RelativeLayout>
+
+</layout>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.mindorks.framework.mvvm.ui.feed.FeedActivity">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="cc.lecent.ywgk.me.model.IdentityViewModel" />
+    </data>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f5f0f0"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/name_Location_id"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="#FF0077EA"
+            android:gravity="center|left"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:onClick="@{viewModel::ReturnOClick}"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@mipmap/ic_fanhui" />
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="家属身份认证"
+                android:textColor="#ffffff"
+                android:textSize="16dp" />
+        </LinearLayout>
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="与家属关系" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="25dp"></LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="156dp"
+                android:layout_height="100dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/ic_province">
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="156dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/ic_province">
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="156dp"
+                android:layout_height="100dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/ic_province">
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="156dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/ic_province">
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="要求" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1.上传必须保证户口簿画面清晰 " />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2.户主页、本人页、家属页为必填项，其它可选填" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="#0077EA"
+                android:text="提交"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</layout>

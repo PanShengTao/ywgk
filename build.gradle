@@ -1,0 +1,36 @@
+buildscript {
+
+    repositories {
+        google()
+        jcenter()
+        maven {
+            url 'https://dl.bintray.com/bigoat/maven'
+        }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.2.1'
+        classpath 'cc.lecent.plugin:android:1.0.18'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+apply plugin: 'cc.lecent.android.config'
+
+config {
+    debug false
+    applicationId 'cc.lecent.ywgk'
+    mainApp 'home'
+    bbcVersion '1.0.11'
+    httpVersion '1.0.2'
+}

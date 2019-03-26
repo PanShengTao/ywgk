@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp">
+
+        <ImageView
+            android:id="@+id/success_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/wallet_icon" />
+
+        <TextView
+            android:id="@+id/pay_textview"
+            style="@style/normal_18dp"
+            android:layout_below="@id/success_image"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:text="￥800.00"
+            android:textColor="#ffff0000"
+            android:textSize="22dp" />
+
+        <TextView
+            android:id="@+id/text_tip"
+            style="@style/normal_16dp"
+            android:layout_below="@id/pay_textview"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:text="交易成功"
+            android:textColor="#ff999999"
+            android:textSize="14dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_tip"
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/normal_18dp"
+                    android:text="收款人" />
+
+                <TextView
+                    style="@style/normal_18dp"
+                    android:layout_marginTop="15dp"
+                    android:text="付款方式" />
+
+                <TextView
+                    style="@style/normal_18dp"
+                    android:layout_marginTop="15dp"
+                    android:text="银联服务费" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/normal_18dp"
+                    android:text="收款人" />
+
+                <TextView
+                    style="@style/normal_18dp"
+                    android:layout_marginTop="15dp"
+                    android:text="收款人" />
+
+                <TextView
+                    style="@style/normal_18dp"
+                    android:layout_marginTop="15dp"
+                    android:text="收款人" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/gray_line" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_tip"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/normal_18dp"
+                    android:text="付款时间" />
+
+                <TextView
+                    style="@style/normal_18dp"
+                    android:layout_marginTop="15dp"
+                    android:text="创建时间" />
+
+                <TextView
+                    style="@style/normal_18dp"
+                    android:layout_marginTop="15dp"
+                    android:text="订单号" />
+
+                <TextView
+                    style="@style/normal_18dp"
+                    android:layout_marginTop="15dp"
+                    android:text="交易号" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="right"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/normal_18dp"
+                    android:text="付款时间" />
+
+                <TextView
+                    style="@style/normal_18dp"
+                    android:layout_marginTop="15dp"
+                    android:text="创建时间" />
+
+                <TextView
+                    style="@style/normal_18dp"
+                    android:layout_marginTop="15dp"
+                    android:text="2018062112352542658578545" />
+
+                <TextView
+                    style="@style/normal_18dp"
+                    android:layout_marginTop="15dp"
+                    android:text="LE112C352542658578545" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</layout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginLeft="40dp"
+    android:layout_marginRight="40dp"
+    android:layout_height="300dp"
+    android:background="@mipmap/approve_pic"
+    >
+
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+            
+            <TextView
+                android:layout_centerInParent="true"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:background="@drawable/button_gray_kuang"
+                android:text="朕知道了"
+                android:gravity="center"
+                android:textColor="@color/text_gray_color"
+                />
+            
+            
+        </RelativeLayout>
+        
+        
+    </LinearLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="model"
+            type="cc.lecent.ywgk.reserve.viewmodel.SelectTimeItemModel" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:weightSum="4">
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3"
+            android:gravity="top">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/gray_line"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3"
+            android:gravity="center|center_horizontal"
+            >
+            <LinearLayout
+
+                android:layout_width="100dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:background="@drawable/gray_btn_rectangle"
+                android:selector="@{model.selector1}"
+                android:padding="5dp"
+                android:onClick="@{()->model.selectOne()}"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="3dp"
+                    android:text="@{model.isReserve}"
+                    android:textSize="16dp"
+                    android:textColor="@{model.color1}"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="上午8:30-11:30"
+                    android:textSize="12dp"
+                    android:textColor="@{model.color1}"/>
+            </LinearLayout
+                >
+
+            <LinearLayout
+                android:layout_marginLeft="20dp"
+                android:layout_width="100dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:background="@drawable/gray_btn_rectangle"
+                android:selector="@{model.selector2}"
+                android:padding="5dp"
+                android:onClick="@{()->model.selectTow()}">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="3dp"
+                    android:text="@{model.isReserve}"
+                    android:textSize="16dp"
+                    android:textColor="@{model.color2}"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="下午13:30-15:30"
+                    android:textSize="12dp"
+                    android:textColor="@{model.color2}"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="2"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="5"
+            android:gravity="center">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:text="取消"
+                android:layout_weight="1"
+                android:textSize="16dp"
+                android:textColor="#fff"
+                android:background="@drawable/raduis_btn_gray"
+                android:onClick="@{()->model.cancel()}"/>
+            <Button
+                android:layout_marginLeft="50dp"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:text="确定"
+                android:background="@drawable/raduis_btn_blue"
+                android:textSize="16dp"
+                android:textColor="#fff"
+                android:layout_weight="1"
+                android:onClick="@{()->model.define()}"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</layout>

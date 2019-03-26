@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="cc.lecent.ywgk.home.model.SocialPublicItemModel" />
+
+        <import type="me.tatarka.bindingcollectionadapter2.LayoutManagers" />
+        <import type="android.view.View" />
+
+    </data>
+
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="1dp"
+        >
+
+        <ImageView
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="130dp"
+            android:layout_height="100dp"
+            android:src="@mipmap/pic"
+            />
+
+        <LinearLayout
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/home_black"
+                android:textSize="16sp"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:text="宁谷监狱即日起与乐诚公司就狱务公开App开发展开深度合作"
+                />
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:textColor="@color/text_gray_color"
+                android:textSize="13sp"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:text="凉风有兴，秋月无边， 亏我思娇的情绪好比度日如年， 虽然我不是玉树临风，潇洒倜傥， 可是我有我广阔的胸襟，加强健的臂腕！ 凉风有兴，秋月无边， 亏我思君的情绪好比度日如年， 虽然我不是闭月羞花，沉鱼落雁， 但我有广阔的胸襟与君共历悲欢"
+                />
+            
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+             
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:id="@+id/institution_mark"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@mipmap/ic_launcher"
+                    />
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/institution_mark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="贵州省宁谷监狱"
+                    android:textSize="11sp"
+                    android:textColor="@color/text_gray_color"
+                    />
+
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="2018-11-12"
+                    android:textSize="11sp"
+                    android:textColor="@color/text_gray_color"
+                    />
+                
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</layout>

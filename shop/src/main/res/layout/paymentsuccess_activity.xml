@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.mindorks.framework.mvvm.ui.feed.FeedActivity">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="cc.lecent.ywgk.shop.model.PaymentSuccessViewModel" />
+    </data>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/name_Location_id"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="#FF7900"
+            android:gravity="center|left"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:onClick="@{viewModel::ReturnOClick}"
+                android:src="@mipmap/ic_fanhui" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="支付成功"
+                android:textColor="#ffffff"
+                android:textSize="20dp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_paymentsuccess" />
+
+            <TextView
+                android:textColor="#FF333333"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/sp_12"
+                android:gravity="center"
+                android:text="订单支付成功￥800.00"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+          android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:onClick="@{viewModel::SeeOnClick}"
+                android:layout_marginRight="@dimen/sp_12"
+                android:layout_marginLeft="12dp"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                android:background="#FFFF7900"
+                android:layout_marginTop="@dimen/sp_16"
+                android:layout_weight="1"
+                android:text="查看订单"
+                android:layout_width="match_parent"
+                android:layout_height="55dp" />
+
+            <Button
+                android:layout_marginRight="@dimen/sp_12"
+                android:layout_marginLeft="12dp"
+                android:textColor="#3b3a3a"
+                android:textSize="20dp"
+                android:background="#efeaea"
+                android:layout_marginTop="@dimen/sp_16"
+                android:layout_weight="1"
+                android:text="返回首页"
+                android:layout_width="match_parent"
+                android:layout_height="55dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</layout>

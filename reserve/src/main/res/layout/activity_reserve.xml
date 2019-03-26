@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <!--<RelativeLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="47dp"-->
+            <!--android:background="#0077EA">-->
+
+            <!--<ImageView-->
+                <!--android:id="@+id/head_back"-->
+                <!--android:layout_width="10dp"-->
+                <!--android:layout_height="18dp"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:src="@mipmap/back_icon" />-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/head_title"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:text="立即预约"-->
+                <!--android:textColor="#fffefefe"-->
+                <!--android:textSize="18dp" />-->
+
+            <!--<LinearLayout-->
+                <!--android:id="@+id/head_img"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_marginRight="14dp"-->
+                <!--android:orientation="vertical">-->
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/head_imgv"-->
+                    <!--android:layout_width="18dp"-->
+                    <!--android:layout_height="18dp"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:background="@mipmap/change_use" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/head_tv"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="切换家属"-->
+                    <!--android:textColor="#fffefefe"-->
+                    <!--android:textSize="10dp" />-->
+            <!--</LinearLayout>-->
+        <!--</RelativeLayout>-->
+        <FrameLayout
+            android:id="@+id/reserve_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </FrameLayout>
+    </LinearLayout>
+
+</layout>

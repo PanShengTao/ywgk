@@ -1,0 +1,4 @@
+apply plugin: 'cc.lecent.android'
+dependencies {
+    api project(':data')
+}

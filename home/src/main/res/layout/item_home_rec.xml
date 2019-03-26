@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="cc.lecent.ywgk.home.model.HomeItemModel" />
+
+        <import type="me.tatarka.bindingcollectionadapter2.LayoutManagers" />
+        <import type="android.view.View" />
+
+    </data>
+
+<LinearLayout
+    android:layout_marginTop="5dp"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="90dp">
+
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="社会公示"
+        android:drawableLeft="@drawable/rectangular_blue"
+        android:drawablePadding="2dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="6dp"
+        android:textColor="@color/home_black"
+        />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/item_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:imp="@{viewModel.installData}"
+        android:viewDirection="@{viewModel.recyclerviewDirection}"
+        app:itemBinding="@{viewModel.itemViewSelectorItem}"
+        app:items="@{viewModel.itemModelsItem}"
+        app:layoutManager="@{LayoutManagers.linear()}"
+    >
+
+
+    </android.support.v7.widget.RecyclerView>
+    
+    
+
+</LinearLayout>
+</layout>

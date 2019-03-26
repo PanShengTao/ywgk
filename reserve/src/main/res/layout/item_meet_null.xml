@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="cc.lecent.ywgk.reserve.viewmodel.MeetItemModel"/>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp">
+
+        <ImageView
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/book_icon"/>
+        <LinearLayout
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="110dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                style="@style/normal_16dp"
+                android:text="暂无会见记录，请点击" />
+
+            <TextView
+                style="@style/bule_16dp"
+                android:text="『立即预约』"
+                android:onClick="@{()->viewModel.reserveNow()}"/>
+            <TextView
+                style="@style/normal_16dp"
+                android:text="预约现场回见"
+                android:singleLine="true"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+</layout>

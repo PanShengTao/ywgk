@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="cc.lecent.ywgk.me">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application>
+        <!--android:allowBackup="true"-->
+        <!--android:icon="@mipmap/ic_launcher"-->
+        <!--android:label="@string/app_name"-->
+        <!--android:roundIcon="@mipmap/ic_launcher_round"-->
+        <!--android:supportsRtl="true"-->
+        <!--android:theme="@style/AppTheme"-->
+        <!--我的-->
+        <activity android:name=".ui.MeActivity"
+            android:launchMode = "singleTask">
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        </activity>
+        <!--家属管理-->
+        <activity android:name=".ui.MembersActivity"
+            android:launchMode = "singleTask">
+
+        </activity>
+        <!--家属绑定-->
+        <activity android:name=".ui.MeBindingActivity"
+            android:launchMode = "singleTask">
+
+        </activity>
+        <!--家属关系资料上传-->
+
+        <activity android:name=".ui.IdentityActivity"
+            android:launchMode = "singleTask">
+
+        </activity>
+        <!--消息通知-->
+        <activity android:name=".ui.HelpActivity"
+            android:launchMode = "singleTask">
+
+        </activity>
+        <!--更换手机号-->
+        <activity android:name=".ui.ReplaceActivity"
+            android:launchMode = "singleTask">
+
+        </activity>
+
+    </application>
+
+</manifest>

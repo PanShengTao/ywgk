@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="title_bar_color">#0077EA</color>
+    <color name="white">#ffffff</color>
+    <color name="home_black">#333333</color>
+    <color name="colorTransparent" >#E92b2b2b</color>
+    <color name="home_bg_color">#F5F5F5</color>
+    <color name="home_text_color">#101010</color>
+
+
+
+
+
+</resources>

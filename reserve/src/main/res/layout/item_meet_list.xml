@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="me.tatarka.bindingcollectionadapter2.LayoutManagers" />
+
+        <import type="android.view.View" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#fff"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/normal_18dp"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:text="张家辉"
+                android:textColor="#000" />
+
+            <TextView
+                style="@style/bule_16dp"
+                android:layout_gravity="bottom"
+                android:text="监狱/导航" />
+
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="16dp"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="3dp"
+                android:layout_marginBottom="3dp"
+                android:background="@mipmap/dh_icon" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="5dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/dottde_line"
+            android:layerType="software"/>
+
+        <LinearLayout
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/normal_16dp"
+                android:layout_gravity="bottom"
+                android:text="会见时间：" />
+
+            <TextView
+                style="@style/normal_16dp"
+                android:layout_gravity="bottom"
+                android:text="2019-02-23   9:00" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/normal_16dp"
+                android:layout_gravity="bottom"
+                android:text="会见时间：" />
+
+            <TextView
+                style="@style/normal_16dp"
+                android:layout_gravity="bottom"
+                android:singleLine="true"
+                android:text="贵州省安顺市西秀区安顺监狱" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</layout>

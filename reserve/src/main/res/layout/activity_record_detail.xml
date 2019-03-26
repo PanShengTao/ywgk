@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="item"
+            type="cc.lecent.ywgk.reserve.viewmodel.RecordDetailModel" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#f4f4f4">
+
+
+        <LinearLayout
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/white_rectangle"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/normal_18dp"
+                    android:text="审核状态：" />
+
+                <TextView
+                    style="@style/normal_18dp"
+                    android:layout_marginTop="15dp"
+                    android:text="所属监狱：" />
+
+                <TextView
+                    style="@style/normal_18dp"
+                    android:layout_marginTop="15dp"
+                    android:text="随行人员：" />
+
+                <TextView
+                    style="@style/normal_18dp"
+                    android:layout_marginTop="15dp"
+                    android:text="会见方式：" />
+
+                <TextView
+                    style="@style/normal_18dp"
+                    android:layout_marginTop="15dp"
+                    android:text="审核时间：" />
+
+                <TextView
+                    style="@style/normal_18dp"
+                    android:layout_marginTop="15dp"
+                    android:text="备        注：" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/normal_18dp"
+                    android:layout_marginLeft="50dp"
+                    android:text="审核状态：" />
+
+                <TextView
+                    style="@style/normal_18dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="15dp"
+                    android:text="所属监狱：" />
+
+                <TextView
+                    style="@style/normal_18dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="15dp"
+                    android:text="随行人员：" />
+
+                <TextView
+                    style="@style/normal_18dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="15dp"
+                    android:text="会见方式：" />
+
+                <TextView
+                    style="@style/normal_18dp"
+                    android:layout_marginTop="15dp"
+                    android:text="2019年02月15日18:06:20" />
+
+                <TextView
+                    style="@style/normal_18dp"
+                    android:layout_marginTop="15dp"
+                    android:singleLine="false"
+                    android:text="方式的范德萨发水电费水电费第三方多方式" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line1"
+            android:layout_margin="8dp"
+            android:background="@drawable/white_rectangle"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/normal_18dp"
+                    android:text="审核状态：" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/yellow_rectangle"
+                    android:gravity="center"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:text="待审核"
+                    android:textColor="#fff"
+                    android:textSize="14dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    style="@style/normal_18dp"
+                    android:text="审核说明：" />
+
+                <TextView
+                    style="@style/normal_18dp"
+                    android:singleLine="false"
+                    android:text="方式的范德萨发水电费水电费第三方多方式" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_below="@id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:layout_marginTop="60dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/blue_btn_rectangle"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:onClick="@{()->item.mapNavigation()}">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="贵州王武监狱/线路导航"
+                android:textColor="#fff"
+                android:textSize="18dp" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="7dp"
+                android:background="@mipmap/navigation_icon" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</layout>

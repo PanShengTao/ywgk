@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingDefaultResource">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="cc.lecent.ywgk.meet.model.ItemRemoteMeetModel" />
+
+        <import type="me.tatarka.bindingcollectionadapter2.LayoutManagers" />
+        <import type="android.view.View" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@color/white"
+        >
+
+        <TextView
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/btn_left_bg"
+            />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="胡一刀"
+            android:textColor="@color/home_black"
+            android:textSize="20sp"
+            />
+
+        <LinearLayout
+            android:id="@+id/time_line"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            android:layout_below="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="会见时间："
+                android:textSize="15sp"
+                android:textColor="@color/btn_left_bg"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2019-12-12 9:30-10:10"
+                android:textSize="15sp"
+                android:textColor="@color/btn_left_bg"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:layout_below="@+id/time_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="会见地点："
+                android:textSize="15sp"
+                android:textColor="@color/btn_left_bg"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="贵州省乐诚监狱会见室"
+                android:textSize="15sp"
+                android:textColor="@color/btn_left_bg"
+                />
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:padding="5dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="22dp"
+            android:background="@drawable/meet_blue_kuang"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="发起会见"
+                android:layout_gravity="center_vertical"
+                android:textSize="14sp"
+                />
+            
+            <ImageView
+                android:layout_marginLeft="2dp"
+                android:layout_gravity="center_vertical"
+                android:layout_width="20dp"
+                android:layout_height="15dp"
+                android:src="@drawable/vidicon_pic"
+                />
+
+
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+
+</layout>

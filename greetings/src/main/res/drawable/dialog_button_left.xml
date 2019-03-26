@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:color="@color/OptionPickerSelector"
+    tools:targetApi="lollipop">
+
+    <item>
+        <selector>
+            <item android:state_enabled="false">
+                <shape>
+                    <corners android:bottomLeftRadius="5dp"></corners>
+                    <solid android:color="@color/color_edit_text"></solid>
+                </shape>
+
+            </item>
+
+            <item android:state_pressed="true">
+
+                <shape>
+                    <corners android:bottomLeftRadius="5dp"></corners>
+
+                    <solid android:color="@color/btn_left_bg"></solid>
+
+                </shape>
+
+            </item>
+
+            <item android:state_pressed="false">
+
+                <shape>
+
+                    <corners android:bottomLeftRadius="5dp"></corners>
+
+                    <solid android:color="@color/btn_left_bg"></solid>
+                </shape>
+            </item>
+        </selector>
+    </item>
+</ripple>

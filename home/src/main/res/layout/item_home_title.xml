@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="cc.lecent.ywgk.home.model.HomeItemModel" />
+
+        <import type="me.tatarka.bindingcollectionadapter2.LayoutManagers" />
+        <import type="android.view.View" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_marginTop="6dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/white"
+            />
+
+        <RelativeLayout
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:id="@+id/fire_mark"
+                android:layout_marginLeft="10dp"
+                android:layout_width="18dp"
+                android:layout_centerVertical="true"
+                android:layout_height="15dp"
+                android:src="@drawable/fire_pic"
+                />
+
+            <TextView
+                android:layout_marginLeft="8dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/fire_mark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="热门狱务信息"
+                android:textSize="17sp"
+                android:textColor="@color/home_black"
+                />
+
+            <TextView
+                android:onClick="@{()-> viewModel.toMoreClick()}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="查看更多"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="30dp"
+                android:textSize="13sp"
+                android:textColor="@color/btn_left_bg"
+                />
+
+            <ImageView
+                android:src="@drawable/right_pic"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_width="8dp"
+                android:layout_height="12dp" />
+
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</layout>

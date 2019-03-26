@@ -1,0 +1,231 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="FtVM"
+            type="cc.lecent.ywgk.reserve.viewmodel.ReserverViewMode" />
+    </data>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#f4f4f4">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="10dp">
+
+
+            <RelativeLayout
+                android:id="@+id/relative_yellow"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_margin="10dp"
+                android:layout_marginEnd="0dp"
+                android:background="@drawable/white_rectangle">
+
+                <View
+                    android:layout_width="7dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/yellow_left_rectangle" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/normal_18dp"
+                        android:text="姓        名" />
+
+                    <TextView
+                        style="@style/normal_18dp"
+                        android:layout_marginTop="15dp"
+                        android:text="双方关系" />
+
+                    <TextView
+                        style="@style/normal_18dp"
+                        android:layout_marginTop="15dp"
+                        android:text="所属监狱" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="80dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="left"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/bule_18dp"
+                        android:text="张立东" />
+
+                    <TextView
+                        style="@style/bule_18dp"
+                        android:layout_marginTop="15dp"
+                        android:text="母子" />
+
+                    <TextView
+                        style="@style/bule_18dp"
+                        android:layout_marginTop="15dp"
+                        android:text="六盘水监狱" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative_blue"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_below="@+id/relative_yellow"
+                android:layout_alignEnd="@+id/relative_yellow"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/white_rectangle">
+
+                <View
+                    android:layout_width="7dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/blue_left_rectangle" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/normal_18dp"
+                        android:text="预约时间" />
+
+                    <TextView
+                        style="@style/normal_18dp"
+                        android:layout_marginTop="15dp"
+                        android:text="预约方式" />
+
+                    <TextView
+                        style="@style/normal_18dp"
+                        android:layout_marginTop="15dp"
+                        android:text="本月剩余预约次数" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="right"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            style="@style/bule_18dp"
+                            android:hint="选择时间"
+                            android:onClick="@{()->FtVM.selectTime()}"
+                            android:text="@{FtVM.settime}" />
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="3dp"
+                            android:onClick="@{()->FtVM.selectTime()}"
+                            android:padding="1dp"
+                            android:src="@mipmap/date_icon" />
+                    </LinearLayout>
+
+
+                    <org.angmarch.views.NiceSpinner
+                        android:id="@+id/nice_spinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="-10dp"
+                        android:padding="1dp"
+                        android:text="现场会见"
+                        android:textSize="18dp"
+                        app:arrowTint="#0077EA"
+                        app:textTint="#666666" />
+
+                    <TextView
+                        style="@style/bule_18dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginRight="10dp"
+                        android:text="3次" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/relative_blue"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:text="备注"
+                android:textColor="#666666"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/edit_tip"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_below="@+id/tip"
+                android:layout_margin="10dp"
+                android:background="@drawable/white_rectangle"
+                android:gravity="left|top"
+                android:inputType="textMultiLine"
+                android:padding="5dp" />
+
+
+        </RelativeLayout>
+
+
+
+    </ScrollView>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="45dp"
+        android:background="@drawable/blue_btn_rectangle"
+        android:onClick="@{()->FtVM.btnMommoit()}"
+        android:text="提交预约"
+        android:textColor="#fff"
+        android:textSize="16dp" />
+    </RelativeLayout>
+
+</layout>

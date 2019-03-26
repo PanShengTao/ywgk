@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <declare-styleable name="CustomNavigatorBar" tools:ignore="MissingDefaultResource">
+        <attr name="titleBarBackground" format="reference|color" /> <!--背景颜色-->
+        <attr name="leftImage" format="reference" /><!--返回图标-->
+        <attr name="leftImageVisiable" format="boolean" /><!--返回view是否显示-->
+        <attr name="leftText" format="string|reference" /><!--返回描述文字-->
+        <attr name="leftTextVisibale" format="boolean" /><!--返回描述文字是否显示-->
+        <attr name="leftTextFontSize" format="dimension|reference" /><!--返回描述文字大小-->
+        <attr name="leftTextColor" format="color|reference" /><!--返回文字颜色-->
+        <attr name="midText" format="string|reference" /><!--标题描述-->
+        <attr name="midTextVisiable" format="boolean" /><!--标题描述是否显示-->
+        <attr name="midTextFontSize" format="dimension|reference" /><!--标题描述文字大小-->
+        <attr name="midTextFontColor" format="color|reference" /><!--标题描述文字颜色-->
+        <attr name="rightText" format="string|reference" /><!--右边按钮文字-->
+        <attr name="rightTextVisible" format="boolean" /><!--右边按钮是否显示-->
+        <attr name="rightTextFontSize" format="dimension|reference" /><!--右边文字大小-->
+        <attr name="rightTextColor" format="color|reference" /><!--右边文字颜色-->
+        <attr name="rightImage" format="reference" /><!--右边图标-->
+        <attr name="rightImageVisible" format="boolean" /><!--右边图标是否显示-->
+    </declare-styleable>
+
+
+</resources>

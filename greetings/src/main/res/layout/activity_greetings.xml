@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <!--<cc.lecent.ywgk.-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="43dp"-->
+        <!--app:titleBarBackground="#111"-->
+        <!--app:midText="sdsdssdsdfd"-->
+        <!--app:midTextVisiable="true"-->
+        <!--app:midTextFontColor="#fff"-->
+        <!--tools:ignore="MissingPrefix" />-->
+
+    <FrameLayout
+        android:id="@+id/classifyFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

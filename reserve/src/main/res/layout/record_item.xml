@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="item"
+            type="cc.lecent.ywgk.reserve.viewmodel.RecordItemModel" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@drawable/white_rectangle"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="15dp"
+        android:weightSum="5"
+        android:onClick="@{()->item.itemClick()}">
+
+        <LinearLayout
+            android:id="@+id/line1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/normal_16dp"
+                android:text="家属姓名" />
+
+            <TextView
+                style="@style/normal_16dp"
+                android:layout_marginTop="12dp"
+                android:text="预约方式" />
+
+            <TextView
+                style="@style/normal_16dp"
+                android:layout_marginTop="12dp"
+                android:text="预约时间：" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/line1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/normal_16dp"
+                android:text="家属姓名" />
+
+            <TextView
+                style="@style/normal_16dp"
+                android:layout_marginTop="12dp"
+                android:text="现场回见" />
+
+            <TextView
+                style="@style/normal_16dp"
+                android:layout_marginTop="12dp"
+                android:text="2019年02月15日17:06:12" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="2">
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/yellow_rectangle"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:text="@{item.status}"
+            android:textColor="#fff"
+            android:textSize="14dp" />
+    </RelativeLayout>
+</layout>

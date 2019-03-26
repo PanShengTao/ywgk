@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#F7F8FA">
+    <!--<cc.lecent.familyservices.widget.cc.lecent.ywgk.data.CustomNavigatorBar-->
+        <!--android:id="@+id/cnb_title"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/px86dp"-->
+        <!--android:background="@color/white"-->
+        <!--app:leftImage="@mipmap/icon_back_black"-->
+        <!--app:leftImageVisiable="true"-->
+        <!--app:leftTextVisibale="false"-->
+        <!--app:midText="语音录制"-->
+        <!--app:midTextFontColor="@color/colorTitle"-->
+        <!--app:midTextFontSize="@dimen/px32sp"-->
+        <!--app:rightImage="@mipmap/add_link_man"-->
+        <!--app:rightImageVisible="false"-->
+        <!--app:rightTextVisible="false" />-->
+
+    <TextView
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+        android:text="语音消息最多30秒"
+        android:textColor="@color/home_black"
+        android:textSize="13sp" />
+
+
+
+    <RelativeLayout
+        android:id="@+id/audio_layout"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:visibility="gone"
+        android:background="@drawable/mic_bg"
+        android:layout_centerInParent="true">
+
+        <Chronometer
+            android:id="@+id/time_display"
+            android:layout_above="@+id/mic_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/home_black"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/mic_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:id="@+id/tv_info"
+            android:layout_below="@+id/mic_icon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/home_black"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="50dp"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:id="@+id/tv_mic"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@drawable/mic_bg"
+            android:layout_margin="8dp"
+            android:gravity="center"
+            android:text="按下说话"
+            android:textColor="@color/home_black"
+            android:textSize="13sp" />
+        <View
+            android:layout_width="50dp"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

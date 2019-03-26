@@ -1,0 +1,1 @@
+apply plugin: 'cc.lecent.android.lib'

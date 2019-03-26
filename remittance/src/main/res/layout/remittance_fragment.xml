@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="cc.lecent.ywgk.remittance.viewmode.RemittanceViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="20dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="100dp"
+            android:scrollbarSize="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/line1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/normal_18dp"
+                            android:text="家属姓名" />
+
+                        <TextView
+                            style="@style/normal_18dp"
+                            android:layout_marginLeft="50dp"
+                            android:text="xxx" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.7dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#eaeaea" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/normal_18dp"
+                            android:text="所属监狱" />
+
+                        <TextView
+                            style="@style/normal_18dp"
+                            android:layout_marginLeft="50dp"
+                            android:text="贵州省安顺监狱" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.8dp"
+                    android:layout_marginTop="15dp"
+                    android:background="#e6e6e6" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/line2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="汇款金额"
+                            android:textColor="#ff333333"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="（银联收取1%汇款服务费）"
+                            android:textColor="#ffffc000"
+                            android:textSize="12dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/line3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/line2"
+                        android:layout_marginTop="5dp"
+                        android:orientation="vertical"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp">
+
+                        <RadioGroup
+                            android:id="@+id/rg_one"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <RadioButton
+                                android:id="@+id/rb1"
+                                style="@style/rb_button"
+                                android:checked="@{viewmodel.checkMoney==1}"
+                                android:checkItem="@{viewmodel.checkItem}"
+                                android:text="100元" />
+
+                            <RadioButton
+                                android:id="@+id/rb2"
+                                style="@style/rb_button"
+                                android:checked="@{viewmodel.checkMoney==2}"
+                                android:checkItem="@{viewmodel.checkItem}"
+                                android:text="200元" />
+
+
+                            <RadioButton
+                                android:id="@+id/rb3"
+                                style="@style/rb_button"
+                                android:checked="@{viewmodel.checkMoney==3}"
+                                android:checkItem="@{viewmodel.checkItem}"
+                                android:text="300元" />
+                        </RadioGroup>
+
+                        <RadioGroup
+                            android:id="@+id/rg_tow"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <RadioButton
+                                android:id="@+id/rb4"
+                                style="@style/rb_button"
+                                android:checked="@{viewmodel.checkMoney==4}"
+                                android:checkItem="@{viewmodel.checkItem}"
+                                android:text="500元" />
+
+                            <RadioButton
+                                android:id="@+id/rb5"
+                                style="@style/rb_button"
+                                android:checked="@{viewmodel.checkMoney==5}"
+                                android:checkItem="@{viewmodel.checkItem}"
+                                android:text="1000元" />
+
+
+                            <RadioButton
+                                android:id="@+id/rb6"
+                                style="@style/rb_button"
+                                android:checked="@{viewmodel.checkMoney==6}"
+                                android:onClick="@{()->viewmodel.otherMoneny()}"
+                                android:text="@{viewmodel.showOtherMoney}" />
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/line4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/line3"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp">
+
+                        <CheckBox
+                            android:id="@+id/check_box"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="@{viewmodel.checkBox}"
+                            android:outlineSpotShadowColor="#fff"
+                            android:theme="@style/blue_CheckBox" />
+
+                        <TextView
+                            style="@style/bule_16dp"
+                            android:layout_gravity="center_vertical"
+                            android:onClick="@{()->viewmodel.agreementDescription()}"
+                            android:text="我已阅读并同意《转账服务协议书》" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.8dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#e6e6e6" />
+
+                <TextView
+                    android:id="@+id/payment_method"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/line4"
+                    android:layout_marginTop="9dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="选择支付方式"
+                    android:textColor="#ff333333"
+                    android:textSize="18dp" />
+
+                <RelativeLayout
+                    android:id="@+id/line5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/payment_method"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginRight="15dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="@{()->viewmodel.aliPay()}"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:background="@mipmap/aliapy_icon" />
+
+                            <TextView
+                                style="@style/normal_16dp"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="20dp"
+                                android:text="支付宝"
+                                android:textColor="#ff2e2a27" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="18dp"
+                            android:onClick="@{()->viewmodel.weixinPay()}">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:background="@mipmap/weixin_icon" />
+
+                            <TextView
+                                style="@style/normal_16dp"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="20dp"
+                                android:text="微信支付"
+                                android:textColor="#ff2e2a27" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="18dp"
+                            android:onClick="@{()->viewmodel.ylianPay()}">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:background="@mipmap/yinlian_icon" />
+
+                            <TextView
+                                style="@style/normal_16dp"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="20dp"
+                                android:text="银联支付"
+                                android:textColor="#ff2e2a27" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <RadioGroup
+                        android:id="@+id/rg_three"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/rb7"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@drawable/chbox_selector"
+                            android:button="@null"
+                            android:checked="@{viewmodel.payWay==1}"
+                            android:onClick="@{()->viewmodel.aliPay()}"/>
+
+                        <RadioButton
+                            android:id="@+id/rb8"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="18dp"
+                            android:background="@drawable/chbox_selector"
+                            android:button="@null"
+                            android:checked="@{viewmodel.payWay==2}"
+                            android:onClick="@{()->viewmodel.weixinPay()}"/>
+
+                        <RadioButton
+                            android:id="@+id/rb9"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="18dp"
+                            android:background="@drawable/chbox_selector"
+                            android:button="@null"
+                            android:checked="@{viewmodel.payWay==3}"
+                            android:onClick="@{()->viewmodel.ylianPay()}"/>
+                    </RadioGroup>
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/button_next"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/blue_btn_rectangle"
+            android:onClick="@{()->viewmodel.onNext()}"
+            android:text="下一步"
+            android:textColor="#fff"
+            android:textSize="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="15dp"
+            android:text="中国银联提供资金汇款服务"
+            android:textColor="#ff666666"
+            android:textSize="12dp" />
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,27 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <cc.lecent.ywgk.greetings.view.CustomerVideoView
+        android:id="@+id/video"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!--<cc.lecent.familyservices.widget.cc.lecent.ywgk.data.CustomNavigatorBar-->
+        <!--android:id="@+id/cnb_title"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/px86dp"-->
+        <!--android:background="@color/color_transparent"-->
+        <!--app:leftImage="@mipmap/icon_back_black"-->
+        <!--app:leftImageVisiable="true"-->
+        <!--app:leftTextVisibale="false"-->
+        <!--app:midText="亲情问候"-->
+        <!--app:midTextFontColor="@color/colorTitle"-->
+        <!--app:midTextFontSize="@dimen/px32sp"-->
+        <!--app:rightImage="@mipmap/add_link_man"-->
+        <!--app:rightImageVisible="false"-->
+        <!--app:rightTextVisible="false" />-->
+
+</RelativeLayout>
